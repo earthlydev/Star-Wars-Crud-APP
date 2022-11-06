@@ -1,10 +1,12 @@
 {
-  "name": "mongodb-practice",
+  "name": "star-wars-quote-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +15,16 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "mongodb": "^4.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earthlydev/Star-Wars-Crud-APP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/earthlydev/Star-Wars-Crud-APP/issues"
+  },
+  "homepage": "https://github.com/earthlydev/Star-Wars-Crud-APP#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
