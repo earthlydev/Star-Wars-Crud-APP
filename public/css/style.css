@@ -1,3 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: #fff;
+    font-family: 'Play', sans-serif;
+}
+p{
+    font-size: 1em;
+}
 h2{
-    color: red;
+    font-size: 1.5em;
+}
+h1{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+button {
+    font-size: 1em;
+    background-color: #fff;
+    height: 5vh;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px #fff;
+    transition: ease-in 0.5s;
+    padding: 0 1.5rem;
+}
+button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.hover-red:hover{
+    background-color: #F00000;
+    color:#fff;
+    box-shadow: 0 0 10px 2px #F00000;
+}
+.hover-blue:hover{
+    background-color: #2196f3;
+    color:#fff;
+    box-shadow: 0 0 10px 2px #2196f3;
+}
+div div:first-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.main-grid > div{
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0 0.5rem; 
+}
+
+
+.main-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+@media (min-width: 650px){
+    .main-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-col-span-3 {
+        grid-column: span 3;
+    }
+}
+header, div.quotes-card{
+    text-align: center;
+    background-image: url('/img/stars-bg.jpg');
+    color: white;
+    margin: 0;
+}
+header{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+div.quotes-card {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.quotes li{
+    list-style-type: none;
+    font-size: 1.75em;
+    color: yellow;
+}
+form button{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.box {
+    position: relative;
+    background: #060c21; /* Change */
+    transition: .5s;
+    
+}
+
+.box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+
+}
+
+.box:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -2;
+    filter: blur(40px);
+
+}
+.box:before,
+.box:after   {  
+    background: linear-gradient(235deg, #F00000, #010615, #2196f3);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after   { /* not supported 😣 */
+    background: linear-gradient(235deg, #2196f3, #010615, #F00000);
+}
+
+
+.box:nth-child(3):before,
+.box:nth-child(3):after   { /* not supported 😣 */
+    background: linear-gradient(235deg, #F00000, #010615, #F00000);
 }
