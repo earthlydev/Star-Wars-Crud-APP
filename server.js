@@ -1,8 +1,10 @@
 const express = require('express');
+const app = express();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
-const connectionString = 
-const app = express();
+const dotenv = require('dotenv').config({path: 'config/.env'});
+const connectionString = process.env.DB_URL;
+
 
 MongoClient.connect(connectionString, {
     useUnifiedTopology: true
@@ -16,7 +18,7 @@ MongoClient.connect(connectionString, {
         //Body-parser placed before CRUD handlers
         app.use(bodyParser.urlencoded({ extended:true }));
         app.use(bodyParser.json());
-        app.use(_ express.static('public'));
+        app.use(express.static('public'));
         //Handlers
         app.get('/', (req,res) => {
             quotesCollection.find().toArray()
